@@ -2,7 +2,6 @@ import { GoArrowLeft } from "react-icons/go";
 import { useNavigate } from "react-router-dom";
 
 import error404 from "../../public/assets/404-error.jpg";
-import Button from "../ui/Button";
 
 export default function PageNotFound() {
   const navigate = useNavigate();
