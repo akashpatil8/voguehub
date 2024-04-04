@@ -37,7 +37,7 @@ export default function Header() {
   const { mutate: logout } = useLogout();
 
   return (
-    <header className="sticky top-0 z-50 grid h-20 bg-white px-[8%]  shadow-[1px_1px_10px_0_rgba(0,0,0,0.3)]">
+    <header className="sticky top-0 z-50 grid h-16 bg-white px-[8%] shadow-[1px_1px_10px_0_rgba(0,0,0,0.3)]">
       <nav className="flex items-center justify-between">
         <motion.h2
           variants={varients}
@@ -45,7 +45,7 @@ export default function Header() {
           animate="final"
           viewport={{ once: true }}
           onClick={() => navigate("/home")}
-          className="w-[33%] cursor-pointer text-start text-xl font-bold tracking-wider sm:text-2xl md:text-3xl"
+          className="w-[33%] cursor-pointer text-start text-xl font-bold tracking-wider sm:text-2xl md:text-2xl"
         >
           VogueHub
         </motion.h2>

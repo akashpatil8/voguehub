@@ -29,14 +29,14 @@ export default function Bag() {
     usePriceCalculation(bagItems);
 
   return (
-    <main className="flex h-[calc(100vh-10rem)] flex-col justify-center px-[8%]">
+    <main className="flex h-[calc(100vh-8rem)] flex-col justify-center px-[8%]">
       {isBagLoading ? (
         <Loader />
       ) : (
         <>
           <NavigationBar itemCount={bagLength} to="/shop" name="shop" />
 
-          <H1 varients={varients} custom={0.2} className="mb-8 uppercase ">
+          <H1 varients={varients} custom={0.2} className="mb-6 uppercase ">
             Your Bag
           </H1>
           <div className="flex">

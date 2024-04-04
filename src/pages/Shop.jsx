@@ -50,7 +50,7 @@ export default function Shop() {
   }
 
   return (
-    <main className="flex min-h-[calc(100vh-10rem)]">
+    <main className="flex min-h-[calc(100vh-8rem)]">
       <aside className="mx-8 my-4 h-[42rem] w-[17%] rounded-lg bg-slate-100 p-8">
         <form onChange={(e) => handleChange(e)}>
           <div className="flex flex-col">

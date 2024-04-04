@@ -19,7 +19,7 @@ export default function Footer() {
       initial="initial"
       whileInView="final"
       viewport={{ once: true }}
-      className="flex h-20 items-center justify-between bg-slate-200 px-[8%] text-slate-800"
+      className="flex h-16 items-center justify-between bg-slate-200 px-[8%] text-slate-800"
     >
       {/* <h2 className="w-[33%] text-start text-xl font-bold tracking-wider sm:text-2xl md:text-2xl">
         VogueHub

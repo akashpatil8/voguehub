@@ -18,7 +18,7 @@ export default function Wishlist() {
     useGetItems("wishlist");
 
   return (
-    <main className="m-4 min-h-[calc(100vh-12rem)] rounded-lg bg-slate-100 p-8">
+    <main className="m-4 min-h-[calc(100vh-10rem)] rounded-lg bg-slate-100 p-8">
       <NavigationBar to="/shop" name="Shop" itemCount={wishlistItems?.length} />
       <H1 varients={varients} custom={0.2} className="mb-8 uppercase">
         Your Wishlist
