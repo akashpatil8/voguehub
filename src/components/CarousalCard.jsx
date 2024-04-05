@@ -12,6 +12,7 @@ export default function CarousalCard({ item, currentIndex, variants }) {
   const { isAuthenticated, popup } = useGetUser();
 
   const { url, title } = item;
+  
   return (
     <div
       className="h-full transition-opacity duration-300"

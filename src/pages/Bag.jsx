@@ -6,7 +6,7 @@ import Button from "../ui/Button";
 import Loader from "../ui/Loader";
 import NavigationBar from "../components/NavigationBar";
 import BagItemListTile from "../components/BagItemListTile";
-import BillingCard from "../components/BillingCard";
+import BillingCard from "../ui/BillingCard";
 import H1 from "../ui/H1";
 import P from "../ui/P";
 

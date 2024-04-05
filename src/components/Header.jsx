@@ -8,11 +8,12 @@ import { GoPerson } from "react-icons/go";
 import { LuUser2 } from "react-icons/lu";
 import { AnimatePresence, motion } from "framer-motion";
 
-import Button from "../ui/Button";
-
 import { useGetUser } from "../hooks/useGetUser";
 import { useGetItems } from "../hooks/useGetItems";
 import { useLogout } from "../hooks/useLogout";
+
+import Button from "../ui/Button";
+import logo from "../../public/assets/logo.png";
 
 const varients = {
   initial: { translateY: -50, opacity: 0 },
@@ -37,19 +38,23 @@ export default function Header() {
   const { mutate: logout } = useLogout();
 
   return (
-    <header className="sticky top-0 z-50 grid h-16 bg-white px-[8%] shadow-[1px_1px_10px_0_rgba(0,0,0,0.3)]">
+    <header className="grid h-16 bg-white px-[8%] shadow-[1px_1px_10px_0_rgba(0,0,0,0.3)]">
       <nav className="flex items-center justify-between">
-        <motion.h2
+        <motion.button
           variants={varients}
           initial="initial"
           animate="final"
           viewport={{ once: true }}
           onClick={() => navigate("/home")}
-          className="w-[33%] cursor-pointer text-start text-xl font-bold tracking-wider sm:text-2xl md:text-2xl"
+          className="cursor-pointer "
         >
-          VogueHub
-        </motion.h2>
-        <div className=" flex w-[33%] items-center justify-end gap-2 text-end sm:gap-3 md:gap-5">
+          <img
+            src={logo}
+            alt=""
+            className="h-11 transition-transform duration-200 hover:scale-110"
+          />
+        </motion.button>
+        <div className="flex w-[33%] items-center justify-end gap-2 text-end sm:gap-3 md:gap-5">
           <div
             className="relative text-center"
             onMouseEnter={() => setShowDialog(true)}
@@ -58,13 +63,13 @@ export default function Header() {
             <motion.div
               variants={varients}
               initial="initial"
-              whileInView="final"
+              animate="final"
               viewport={{ once: true }}
               custom={0.2}
             >
               <GoPerson
                 size={24}
-                className="cursor-pointer duration-150 hover:scale-110"
+                className=" cursor-pointer duration-150 hover:scale-110"
               />
             </motion.div>
             <AnimatePresence>
@@ -118,30 +123,31 @@ export default function Header() {
             </AnimatePresence>
           </div>
 
-          <div className="h-4 w-[1px] bg-slate-300 sm:h-5 sm:w-0.5"></div>
+          <div className="h-5 w-[1.5px] bg-slate-300"></div>
 
           <motion.div
             variants={varients}
             initial="initial"
-            whileInView="final"
+            animate="final"
             viewport={{ once: true }}
             custom={0.3}
+            className=" bg-transparent"
           >
             <IoMdHeartEmpty
               onClick={() => {
                 isAuthenticated ? navigate("/wishlist") : popup(<LuUser2 />);
               }}
               size={24}
-              className="cursor-pointer duration-150 hover:scale-110"
+              className="cursor-pointer text-slate-800 duration-150 hover:scale-110"
             />
           </motion.div>
 
-          <div className="h-4 w-[1px] bg-slate-300 sm:h-5 sm:w-0.5"></div>
+          <div className="h-5 w-[1.5px] bg-slate-300"></div>
 
           <motion.div
             variants={varients}
             initial="initial"
-            whileInView="final"
+            animate="final"
             viewport={{ once: true }}
             custom={0.4}
             className="relative"

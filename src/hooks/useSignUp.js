@@ -10,7 +10,7 @@ export function useSignUp() {
   const { mutate, isPending } = useMutation({
     mutationFn: signUpApi,
     onSuccess: () => {
-      navigate("/", { replace: true });
+      navigate("/home", { replace: true });
       toast.success("Account added successfully");
     },
     onError: (error) => toast.error(error),

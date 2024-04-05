@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import ProductsContainer from "../components/ProductContainer";
 import NavigationBar from "../components/NavigationBar";
-import CatogoryListTile from "../components/CaegoryListTile";
+import CatogoryListTile from "../ui/CaegoryListTile";
 import Loader from "../ui/Loader";
 
 import { useGetItems } from "../hooks/useGetItems";

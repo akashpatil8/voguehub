@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { GoArrowRight } from "react-icons/go";
 import toast from "react-hot-toast";
 
-import H2 from "../ui/H2";
-import Button from "../ui/Button";
-import BillingCardListTile from "../ui/BillingCardListTile";
+import H2 from "./H2";
+import Button from "./Button";
+import BillingCardListTile from "./BillingCardListTile";
 
 const varients = {
   initial: { translateY: -30, opacity: 0 },
