@@ -5,18 +5,8 @@ import NavigationBar from "../components/NavigationBar";
 import CatogoryListTile from "../ui/CaegoryListTile";
 import Loader from "../ui/Loader";
 
+import { categoryData } from "../../public/data/categoryData";
 import { useGetItems } from "../hooks/useGetItems";
-import { useQueryClient } from "@tanstack/react-query";
-
-const categoryData = [
-  "all",
-  "new",
-  "featured",
-  "trending",
-  "shirts",
-  "pants",
-  "sweaters",
-];
 
 const categoryVarients = {
   initial: { translateY: -10, opacity: 0 },
@@ -29,17 +19,12 @@ const categoryVarients = {
 
 export default function Shop() {
   const [category, setCategory] = useState("all");
-  const queryClient = useQueryClient();
 
-  const newItems = queryClient.getQueryData(["new"]);
-  const featuredItems = queryClient.getQueryData(["featured"]);
-  const trendingItems = queryClient.getQueryData(["trending"]);
-
-  // const { data: newItems, isLoading: isNewLoading } = useGetItems("new");
-  // const { data: featuredItems, isLoading: isFeaturedLoading } =
-  //   useGetItems("featured");
-  // const { data: trendingItems, isLoading: isTrendingLoading } =
-  //   useGetItems("trending");
+  const { data: newItems, isLoading: isNewLoading } = useGetItems("new");
+  const { data: featuredItems, isLoading: isFeaturedLoading } =
+    useGetItems("featured");
+  const { data: trendingItems, isLoading: isTrendingLoading } =
+    useGetItems("trending");
   const { data: allItems, isAllLoading } = useGetItems("all");
   const { data: shirts, isShirtsLoading } = useGetItems("shirts");
   const { data: pants, isPantsLoading } = useGetItems("pants");
@@ -75,32 +60,41 @@ export default function Shop() {
               <ProductsContainer items={allItems} />
             </>
           ))}
-        {category === "new" && (
-          <>
-            <NavigationBar itemCount={newItems?.length} to="/" name="home" />
-            <ProductsContainer items={newItems} />
-          </>
-        )}
-        {category === "featured" && (
-          <>
-            <NavigationBar
-              itemCount={featuredItems?.length}
-              to="/"
-              name="home"
-            />
-            <ProductsContainer items={featuredItems} />
-          </>
-        )}
-        {category === "trending" && (
-          <>
-            <NavigationBar
-              itemCount={trendingItems?.length}
-              to="/"
-              name="home"
-            />
-            <ProductsContainer items={trendingItems} />
-          </>
-        )}
+        {category === "new" &&
+          (isNewLoading ? (
+            <Loader />
+          ) : (
+            <>
+              <NavigationBar itemCount={newItems?.length} to="/" name="home" />
+              <ProductsContainer items={newItems} />
+            </>
+          ))}
+        {category === "featured" &&
+          (isFeaturedLoading ? (
+            <Loader />
+          ) : (
+            <>
+              <NavigationBar
+                itemCount={featuredItems?.length}
+                to="/"
+                name="home"
+              />
+              <ProductsContainer items={featuredItems} />
+            </>
+          ))}
+        {category === "trending" &&
+          (isTrendingLoading ? (
+            <Loader />
+          ) : (
+            <>
+              <NavigationBar
+                itemCount={trendingItems?.length}
+                to="/"
+                name="home"
+              />
+              <ProductsContainer items={trendingItems} />
+            </>
+          ))}
         {category === "shirts" &&
           (isShirtsLoading ? (
             <Loader />

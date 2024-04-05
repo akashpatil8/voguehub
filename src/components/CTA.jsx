@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { LuUser2 } from "react-icons/lu";
 
+import H1 from "../ui/H1";
+import P from "../ui/P";
 import Button from "../ui/Button";
 
 import { useGetUser } from "../hooks/useGetUser";
-import H1 from "../ui/H1";
-import P from "../ui/P";
 
 const varients = {
   initial: { translateY: 80, opacity: 0 },

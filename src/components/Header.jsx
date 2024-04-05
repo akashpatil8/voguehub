@@ -8,12 +8,12 @@ import { GoPerson } from "react-icons/go";
 import { LuUser2 } from "react-icons/lu";
 import { AnimatePresence, motion } from "framer-motion";
 
+import Button from "../ui/Button";
+import logo from "../../public/assets/logo.png";
+
 import { useGetUser } from "../hooks/useGetUser";
 import { useGetItems } from "../hooks/useGetItems";
 import { useLogout } from "../hooks/useLogout";
-
-import Button from "../ui/Button";
-import logo from "../../public/assets/logo.png";
 
 const varients = {
   initial: { translateY: -50, opacity: 0 },

@@ -48,21 +48,22 @@ export default function ProductCard({ item, varients, i }) {
       initial="initial"
       animate="final"
       custom={0.2 * i}
-      className="w-[14rem]"
+      className="relative w-[14rem]"
     >
       <img
         src={imageUrl}
         alt=""
         className="mb-2 h-[20rem] w-full rounded-md bg-stone-400 object-cover"
       />
+      <div className="absolute bottom-36 left-3 h-6 w-12 rounded-sm bg-slate-800 opacity-60"></div>
+      <div className="absolute bottom-36 left-3 flex h-6 w-12 items-center justify-center gap-1 rounded-sm text-xs  font-bold text-slate-100">
+        <BiSolidStar />
+        {rating}
+      </div>
       <div className="flex items-center justify-between">
         <h2 className="overflow-hidden text-ellipsis text-sm font-medium tracking-wider ">
           {name}
         </h2>
-        <p className="flex items-center gap-1 text-sm font-bold ">
-          <BiSolidStar />
-          <span>{rating}</span>
-        </p>
       </div>
       <P size="sm" className="text-left">
         {brand}
