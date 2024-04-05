@@ -48,7 +48,7 @@ export default function ProductCard({ item, varients, i }) {
       initial="initial"
       animate="final"
       custom={0.2 * i}
-      className="w-[15rem]"
+      className="w-[14rem]"
     >
       <img
         src={imageUrl}
