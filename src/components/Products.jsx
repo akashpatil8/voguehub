@@ -65,7 +65,7 @@ export default function Products() {
           selected={selected}
           tabName="featured"
         >
-          Featured Products
+          Featured Items
         </TabButton>
         <TabButton
           onClick={() => setSelected("trending")}

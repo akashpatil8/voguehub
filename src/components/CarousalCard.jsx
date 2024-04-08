@@ -26,7 +26,7 @@ export default function CarousalCard({ item, currentIndex, variants }) {
         className=" absolute h-full w-full object-cover"
       />
       <div className="absolute h-full w-full bg-stone-800 opacity-60"></div>
-      <div className="absolute flex h-full flex-col items-center justify-center gap-2 align-middle opacity-100 lg:gap-14">
+      <div className="absolute flex h-full w-full flex-col items-center justify-center gap-2 align-middle opacity-100 lg:gap-14">
         <motion.span
           variants={variants}
           initial="initial"

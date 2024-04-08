@@ -48,28 +48,28 @@ export default function ProductCard({ item, varients, i }) {
       initial="initial"
       animate="final"
       custom={0.2 * i}
-      className="relative lg:w-56"
+      className="relative w-40 lg:w-56"
     >
       <img
         src={imageUrl}
-        alt=""
-        className="mb-2 h-80 w-full rounded-md bg-stone-400 object-cover"
+        alt="product-img"
+        className="mb-2 h-52 w-full rounded-md bg-stone-400 object-cover lg:h-80"
       />
       <div className="absolute bottom-36 left-3 h-6 w-12 rounded-sm bg-slate-800 opacity-60"></div>
       <div className="absolute bottom-36 left-3 flex h-6 w-12 items-center justify-center gap-1 rounded-sm text-xs  font-bold text-slate-100">
         <BiSolidStar />
         {rating}
       </div>
-      <div className="flex items-center justify-between">
-        <h2 className="overflow-hidden text-ellipsis text-sm font-medium tracking-wider ">
-          {name}
-        </h2>
-      </div>
+
+      <h2 className="overflow-hidden text-ellipsis text-xs font-medium tracking-wider lg:text-sm ">
+        {name}
+      </h2>
       <P size="sm" className="text-left">
         {brand}
       </P>
+
       <div className="mt-2 flex items-center gap-2">
-        <p className="text-sm font-bold">
+        <p className="text-xs font-bold lg:text-sm">
           ${discountedPrice > 0 ? discountedPrice : price}
         </p>
         {discountedPrice > 0 && (
@@ -77,7 +77,9 @@ export default function ProductCard({ item, varients, i }) {
             <p className="text-left text-xs text-stone-400 line-through">
               ${price}
             </p>
-            <p className="text-sm font-light text-red-600">({discount}%)</p>
+            <p className="text-xs font-light text-red-600 lg:text-sm">
+              ({discount}%)
+            </p>
           </>
         )}
       </div>
@@ -85,13 +87,13 @@ export default function ProductCard({ item, varients, i }) {
         <button
           onClick={() => addToBag(item)}
           disabled={isItemInBag}
-          className="flex h-10 w-[80%] items-center justify-center gap-1 rounded-md bg-slate-800 text-sm font-medium text-slate-100 duration-200 hover:bg-slate-600 focus:outline-none focus:ring-[1px] focus:ring-slate-800 disabled:cursor-not-allowed"
+          className="flex h-8 w-[80%] items-center justify-center gap-1 rounded-md bg-slate-800 text-xs font-medium text-slate-100 duration-200 hover:bg-slate-600 focus:outline-none focus:ring-[1px] focus:ring-slate-800 disabled:cursor-not-allowed lg:h-10 lg:text-sm"
         >
           {isAddingToBag ? (
             <Spinner type="dark" />
           ) : (
             <>
-              <LiaShoppingBagSolid size={20} />
+              <LiaShoppingBagSolid className="text-base lg:text-xl" />
               {isItemInBag ? "Added" : "Add to bag"}
             </>
           )}
@@ -102,16 +104,16 @@ export default function ProductCard({ item, varients, i }) {
               ? deleteItemFromWishlist(itemId)
               : addToWishlist(item)
           }
-          className="flex h-10 w-[20%] items-center justify-center gap-1 rounded-md bg-slate-200 text-sm font-medium text-slate-800 duration-200 hover:bg-slate-300 focus:outline-none focus:ring-[1px] focus:ring-slate-400 disabled:cursor-not-allowed"
+          className="flex w-[20%] items-center justify-center gap-1 rounded-md bg-slate-200 text-sm font-medium text-slate-800 duration-200 hover:bg-slate-300 focus:outline-none focus:ring-[1px] focus:ring-slate-400 disabled:cursor-not-allowed lg:h-10"
         >
           {isAddingToWishlist || isDeletingItemFromWishlist ? (
             <Spinner type="dark" />
           ) : (
             <>
               {isItemInWishlist ? (
-                <IoHeart size={20} />
+                <IoHeart className="text-base lg:text-xl" />
               ) : (
-                <IoHeartOutline size={20} />
+                <IoHeartOutline className="text-base lg:text-xl" />
               )}
             </>
           )}

@@ -30,7 +30,7 @@ export default function Carousal() {
 
   return (
     <main className="relative">
-      <div className=" h-60 overflow-hidden lg:h-[calc(100vh-5rem)] ">
+      <div className="h-60 overflow-hidden lg:h-[calc(100vh-5rem)] ">
         {data.map((item) => (
           <CarousalCard
             key={item.id}
