@@ -42,15 +42,15 @@ export default function CTA() {
         whileInView="final"
         viewport={{ once: true }}
         custom={0.4}
-        className="flex h-10 justify-center gap-1 lg:h-14 lg:gap-2"
+        className="mx-auto flex h-10 w-[70%] items-center justify-center gap-1 lg:h-14 lg:gap-2"
       >
-        <div className="my-2 flex items-center gap-2 rounded-md bg-white px-2 py-2 lg:px-4">
+        <div className="my-2 flex h-full items-center gap-2 rounded-sm bg-slate-100 px-2 lg:rounded-md lg:px-4">
           <LuUser2 className="text-slate-500 lg:text-xl" />
           <input
             id="email"
             type="email"
             placeholder="Name"
-            className="h-6 text-sm text-slate-600 placeholder:text-slate-400 focus:outline-none lg:h-8 lg:text-base lg:placeholder:text-base"
+            className="h-6 bg-slate-100 text-sm text-slate-600 placeholder:text-slate-400 focus:outline-none lg:h-8 lg:text-base lg:placeholder:text-base"
           />
         </div>
         <Button

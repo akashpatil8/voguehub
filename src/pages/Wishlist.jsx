@@ -18,9 +18,9 @@ export default function Wishlist() {
     useGetItems("wishlist");
 
   return (
-    <main className="m-4 min-h-[calc(100vh-10rem)] rounded-lg bg-slate-100 p-8">
+    <main className="m-2 min-h-[calc(100dvh-5rem)] rounded-md bg-slate-100 px-2 py-4 lg:m-4 lg:min-h-[calc(100vh-10rem)] lg:rounded-lg lg:p-8">
       <NavigationBar to="/shop" name="Shop" itemCount={wishlistItems?.length} />
-      <H1 varients={varients} custom={0.2} className="mb-8 uppercase">
+      <H1 varients={varients} custom={0.2} className="uppercase lg:mb-8">
         Your Wishlist
       </H1>
       {isWishlistLoading ? (

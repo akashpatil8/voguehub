@@ -29,10 +29,10 @@ export default function Services() {
             initial="initial"
             whileInView="final"
             viewport={{ once: true }}
-            custom={0.4}
+            custom={0.2}
             className="mx-auto my-2 h-[1px] w-20 bg-slate-800 lg:my-0 lg:h-16 lg:w-[2px] "
           ></motion.div>
-          <P varients={varients} custom={0.7}>
+          <P varients={varients} custom={0.4}>
             We ensure our customers have best shopping experience.
           </P>
         </div>

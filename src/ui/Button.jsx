@@ -27,7 +27,7 @@ export default function Button({
         whileInView="final"
         custom={custom}
         onClick={onClick}
-        className="mt-4 flex items-center justify-center gap-1 rounded-md bg-slate-100 px-4 py-2 text-xs font-medium duration-300 hover:bg-slate-300 focus:outline-none focus:ring-[1px] focus:ring-slate-400 sm:text-sm md:py-3 md:text-lg lg:gap-3 lg:px-6 lg:text-lg"
+        className="mt-4 flex items-center justify-center gap-1 rounded-sm bg-slate-100 px-4 py-2 text-xs font-medium duration-300 hover:bg-slate-300 focus:outline-none focus:ring-[1px] focus:ring-slate-400 sm:text-sm md:py-3 md:text-lg lg:gap-3 lg:rounded-md lg:px-6 lg:text-lg"
       >
         {children}
       </motion.button>
@@ -79,7 +79,7 @@ export default function Button({
     <button
       type={btnType}
       onClick={onClick}
-      className="cursor-pointer rounded-md bg-slate-800 px-4 py-2 text-xs font-medium tracking-wide text-slate-100 duration-300 hover:bg-slate-700 hover:text-slate-100 focus:border-none focus:outline-none focus:ring-[1px] focus:ring-slate-800 lg:px-16 lg:py-2 lg:text-lg"
+      className="h-full cursor-pointer rounded-sm bg-slate-800 px-4 py-2 text-xs font-medium tracking-wide text-slate-100 duration-300 hover:bg-slate-700 hover:text-slate-100 focus:border-none focus:outline-none focus:ring-[1px] focus:ring-slate-800 lg:rounded-md lg:px-16 lg:py-2 lg:text-lg"
     >
       {children}
     </button>

@@ -24,16 +24,16 @@ export default function NavigationBar({
       variants={varients}
       initial="initial"
       animate="final"
-      className="mb-8 flex justify-between rounded-md border-[1.3px] border-slate-300 p-4"
+      className="mb-4 flex justify-between rounded-sm border-[1.3px] border-slate-300 p-2 lg:mb-8 lg:rounded-md lg:p-4"
     >
       <button
         onClick={() => navigate(to)}
-        className="flex items-center gap-2 rounded-sm px-2 capitalize text-slate-800 focus:outline-none focus:ring-1 focus:ring-gray-800"
+        className="flex items-center gap-1 rounded-sm capitalize text-slate-800 focus:outline-none focus:ring-1 focus:ring-gray-800 lg:gap-2 "
       >
-        <GoArrowLeft size={22} />
-        <span>{name}</span>
+        <GoArrowLeft className="lg:text-2xl" />
+        <span className="text-xs lg:text-lg">{name}</span>
       </button>
-      <h3 className="text-slate-800">
+      <h3 className="text-xs text-slate-800 lg:text-lg">
         Showing:{" "}
         <span className="font-semibold">{!itemCount ? "0" : itemCount}</span>{" "}
         {item}

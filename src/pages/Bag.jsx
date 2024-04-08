@@ -29,24 +29,24 @@ export default function Bag() {
     usePriceCalculation(bagItems);
 
   return (
-    <main className="flex h-[calc(100vh-8rem)] flex-col justify-center px-[8%]">
+    <main className="flex flex-col justify-center px-[5%] lg:min-h-[calc(100vh-8rem)] lg:px-[8%]">
       {isBagLoading ? (
         <Loader />
       ) : (
         <>
           <NavigationBar itemCount={bagLength} to="/shop" name="shop" />
 
-          <H1 varients={varients} custom={0.2} className="mb-6 uppercase ">
+          <H1 varients={varients} custom={0.2} className="uppercase lg:mb-6">
             Your Bag
           </H1>
-          <div className="flex">
-            <aside className="mr-auto w-[55%]">
+          <div className="lg:flex">
+            <aside className="lg:mr-auto lg:w-[55%]">
               <motion.ul
                 variants={varients}
                 initial="initial"
                 animate="final"
                 custom={0.4}
-                className="h-[280px] overflow-y-auto pr-4"
+                className="my-4 max-h-[280px] overflow-y-auto lg:h-[280px] lg:pr-4"
               >
                 {bagItems.length === 0 ? (
                   <P>No items in your bag</P>
@@ -60,8 +60,8 @@ export default function Bag() {
                   ))
                 )}
               </motion.ul>
-              <div className="mt-12">
-                <P varients={varients} custom={0.6} className="mb-4">
+              <div className="lg:mt-12">
+                <P varients={varients} custom={0.6} className="mb-2 lg:mb-4">
                   Have a coupon? Enter your code here,
                 </P>
 
@@ -72,13 +72,13 @@ export default function Bag() {
                   custom={0.8}
                   className="flex gap-2"
                 >
-                  <div className="flex w-[20rem] items-center gap-2 rounded-md border-[1px] bg-white px-4 py-2 ">
-                    <RiCoupon3Line size={20} className="text-slate-400" />
+                  <div className="flex items-center gap-2 rounded-md border-[1px] bg-white lg:w-80 lg:px-4 lg:py-2 ">
+                    <RiCoupon3Line className="text-slate-400 lg:text-xl" />
                     <input
                       id="coupon"
                       type="text"
                       placeholder="Enter coupon code"
-                      className="h-8 text-slate-600 placeholder:text-base placeholder:text-slate-400 focus:outline-none"
+                      className="h-8 text-sm text-slate-600 placeholder:text-sm placeholder:text-slate-400 focus:outline-none lg:text-base lg:placeholder:text-base"
                     />
                   </div>
                   <Button onClick={() => toast.error("Coupon code invalid")}>

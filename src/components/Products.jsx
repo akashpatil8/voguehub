@@ -51,7 +51,7 @@ export default function Products() {
         initial="initial"
         whileInView="final"
         viewport={{ once: true }}
-        className="mx-auto my-4 flex w-[70%] justify-center rounded-md bg-slate-200 lg:my-8"
+        className="mx-auto my-4 flex w-[70%] justify-center rounded-sm bg-slate-200 lg:my-8 lg:rounded-md"
       >
         <TabButton
           onClick={() => setSelected("new")}
@@ -100,7 +100,7 @@ export default function Products() {
           onClick={() => {
             isAuthenticated ? navigate("/shop") : popup(<LuUser2 />);
           }}
-          className="absolute -bottom-4 left-0 right-0 mx-auto h-8 w-24 rounded-md border-[1px] border-stone-400 bg-white text-xs transition-colors duration-300 hover:border-slate-800 hover:bg-slate-800 hover:text-slate-100 focus:outline-none focus:ring-[1px] focus:ring-gray-400 focus:ring-offset-0 lg:-bottom-5 lg:h-11 lg:w-32 lg:border-[1.5px] lg:text-base"
+          className="absolute -bottom-4 left-0 right-0 mx-auto h-8 w-24 rounded-sm border-[1px] border-stone-400 bg-white text-xs transition-colors duration-300 hover:border-slate-800 hover:bg-slate-800 hover:text-slate-100 focus:outline-none focus:ring-[1px] focus:ring-gray-400 focus:ring-offset-0 lg:-bottom-5 lg:h-11 lg:w-32 lg:rounded-md lg:border-[1.5px] lg:text-base"
         >
           Shop more
         </button>

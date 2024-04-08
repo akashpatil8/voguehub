@@ -53,10 +53,10 @@ export default function ProductCard({ item, varients, i }) {
       <img
         src={imageUrl}
         alt="product-img"
-        className="mb-2 h-52 w-full rounded-md bg-stone-400 object-cover lg:h-80"
+        className="mb-2 h-52 w-full rounded-sm bg-stone-400 object-cover lg:h-80 lg:rounded-md"
       />
       <div className=" absolute bottom-[7.7rem] left-2 h-4 w-8 rounded-sm bg-slate-800 opacity-60 lg:bottom-36 lg:left-3 lg:h-6 lg:w-12"></div>
-      <div className=" absolute bottom-[7.7rem] left-2 flex h-4 w-8 items-center justify-center gap-1 rounded-sm text-[0.6rem] font-bold text-slate-100 lg:bottom-36 lg:left-3 lg:h-6 lg:w-12 lg:text-xs">
+      <div className="absolute bottom-[7.7rem] left-2 flex h-4 w-8 items-center justify-center gap-0.5 rounded-sm text-[0.6rem] font-bold text-slate-100 lg:bottom-36 lg:left-3 lg:h-6 lg:w-12 lg:gap-1 lg:text-xs">
         <BiSolidStar />
         {rating}
       </div>
@@ -83,11 +83,11 @@ export default function ProductCard({ item, varients, i }) {
           </>
         )}
       </div>
-      <div className="mt-5 flex justify-between gap-2">
+      <div className="mt-5 flex justify-between gap-1 lg:gap-2">
         <button
           onClick={() => addToBag(item)}
           disabled={isItemInBag}
-          className="flex h-8 w-[80%] items-center justify-center gap-1 rounded-md bg-slate-800 text-xs font-medium text-slate-100 duration-200 hover:bg-slate-600 focus:outline-none focus:ring-[1px] focus:ring-slate-800 disabled:cursor-not-allowed lg:h-10 lg:text-sm"
+          className="flex h-8 w-[80%] items-center justify-center gap-1 rounded-sm bg-slate-800 text-xs font-medium text-slate-100 duration-200 hover:bg-slate-600 focus:outline-none focus:ring-[1px] focus:ring-slate-800 disabled:cursor-not-allowed lg:h-10 lg:rounded-md lg:text-sm"
         >
           {isAddingToBag ? (
             <Spinner type="dark" />
@@ -104,7 +104,7 @@ export default function ProductCard({ item, varients, i }) {
               ? deleteItemFromWishlist(itemId)
               : addToWishlist(item)
           }
-          className="flex w-[20%] items-center justify-center gap-1 rounded-md bg-slate-200 text-sm font-medium text-slate-800 duration-200 hover:bg-slate-300 focus:outline-none focus:ring-[1px] focus:ring-slate-400 disabled:cursor-not-allowed lg:h-10"
+          className="flex w-[20%] items-center justify-center gap-1 rounded-sm bg-slate-200 text-sm font-medium text-slate-800 duration-200 hover:bg-slate-300 focus:outline-none focus:ring-[1px] focus:ring-slate-400 disabled:cursor-not-allowed lg:h-10 lg:rounded-md"
         >
           {isAddingToWishlist || isDeletingItemFromWishlist ? (
             <Spinner type="dark" />
