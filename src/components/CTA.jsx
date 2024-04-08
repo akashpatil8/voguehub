@@ -23,33 +23,34 @@ export default function CTA() {
   const { isAuthenticated, popup } = useGetUser();
 
   return (
-    <main className="mx-[8%] my-[6rem] text-center">
-      <H1 varients={varients} className="mb-2">
-        Subscribe to our newsletter to get updates
-        <br /> to our latest collections
-      </H1>
-      <P
-        varients={varients}
-        custom={0.2}
-        className="mb-4 font-light text-stone-500"
-      >
-        Get 20% on your first order just by subscribing to our newsletter
-      </P>
+    <main className="mx-[5%] my-12 text-center lg:mx-[8%] lg:my-24">
+      <div className="mx-auto w-[80%]">
+        <H1 varients={varients} className="mb-2">
+          Subscribe to our newsletter to get updates to our latest collections
+        </H1>
+        <P
+          varients={varients}
+          custom={0.2}
+          className="mb-4 font-light text-stone-500"
+        >
+          Get 20% on your first order just by subscribing to our newsletter
+        </P>
+      </div>
       <motion.div
         variants={varients}
         initial="initial"
         whileInView="final"
         viewport={{ once: true }}
         custom={0.4}
-        className="flex justify-center gap-2"
+        className="flex h-10 justify-center gap-1 lg:h-14 lg:gap-2"
       >
-        <div className="flex w-[25%] items-center gap-2 rounded-md border-[1px] bg-white px-4 py-2 ">
-          <LuUser2 size={20} className="text-slate-400" />
+        <div className="my-2 flex items-center gap-2 rounded-md bg-white px-2 py-2 lg:px-4">
+          <LuUser2 className="text-slate-500 lg:text-xl" />
           <input
             id="email"
             type="email"
             placeholder="Name"
-            className="h-8 text-slate-600 placeholder:text-base placeholder:text-slate-400 focus:outline-none"
+            className="h-6 text-sm text-slate-600 placeholder:text-slate-400 focus:outline-none lg:h-8 lg:text-base lg:placeholder:text-base"
           />
         </div>
         <Button
@@ -60,7 +61,7 @@ export default function CTA() {
           Subscribe
         </Button>
       </motion.div>
-      <P varients={varients} custom={0.4} size="sm" className="mt-4">
+      <P varients={varients} custom={0.4} size="sm" className="mt-2 lg:mt-4">
         You will be able to unsubscribe at anytime.
         <br />
         Read our privecy policy,

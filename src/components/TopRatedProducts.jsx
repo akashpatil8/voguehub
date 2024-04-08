@@ -32,24 +32,24 @@ export default function TopRatedProducts() {
   if (isTopRatedLoading) return <Loader />;
 
   return (
-    <main className="mx-[12%] text-center">
+    <main className="mx-[5%] text-center lg:mx-[12%]">
       <H1 varients={varients} className="mb-1">
         Top rated products
       </H1>
-      <P varients={varients} custom={0.3} className="mb-12">
+      <P varients={varients} custom={0.3} className="mx-auto  w-[70%] ">
         Here are the most liked products by our customers, have a look at it
       </P>
       <motion.div
         initial="initial"
         whileInView="final"
         transition={{ staggerChildren: 0.3 }}
-        className="flex justify-center gap-12"
+        className="my-8 grid grid-cols-2 gap-4 lg:my-12 lg:grid-cols-3 lg:gap-12"
       >
         {topRatedItems?.map((item) => (
           <ProductCard varients={productVarients} key={item.id} item={item} />
         ))}
       </motion.div>
-      <div className="mx-auto w-[80%]">
+      <div className="mx-auto w-[95%]">
         <Divider />
       </div>
     </main>

@@ -79,7 +79,7 @@ export default function Button({
     <button
       type={btnType}
       onClick={onClick}
-      className="cursor-pointer rounded-md bg-slate-800 px-8 py-2 text-xs font-medium tracking-wide text-slate-100 duration-300 hover:bg-slate-700 hover:text-slate-100 focus:border-none focus:outline-none focus:ring-[1px] focus:ring-slate-800 lg:px-16 lg:py-3"
+      className="cursor-pointer rounded-md bg-slate-800 px-4 py-2 text-xs font-medium tracking-wide text-slate-100 duration-300 hover:bg-slate-700 hover:text-slate-100 focus:border-none focus:outline-none focus:ring-[1px] focus:ring-slate-800 lg:px-16 lg:py-2 lg:text-lg"
     >
       {children}
     </button>

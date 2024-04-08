@@ -55,8 +55,8 @@ export default function ProductCard({ item, varients, i }) {
         alt="product-img"
         className="mb-2 h-52 w-full rounded-md bg-stone-400 object-cover lg:h-80"
       />
-      <div className="absolute bottom-36 left-3 h-6 w-12 rounded-sm bg-slate-800 opacity-60"></div>
-      <div className="absolute bottom-36 left-3 flex h-6 w-12 items-center justify-center gap-1 rounded-sm text-xs  font-bold text-slate-100">
+      <div className=" absolute bottom-[7.7rem] left-2 h-4 w-8 rounded-sm bg-slate-800 opacity-60 lg:bottom-36 lg:left-3 lg:h-6 lg:w-12"></div>
+      <div className=" absolute bottom-[7.7rem] left-2 flex h-4 w-8 items-center justify-center gap-1 rounded-sm text-[0.6rem] font-bold text-slate-100 lg:bottom-36 lg:left-3 lg:h-6 lg:w-12 lg:text-xs">
         <BiSolidStar />
         {rating}
       </div>

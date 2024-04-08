@@ -27,20 +27,20 @@ export default function AddBanner() {
       initial="initial"
       whileInView="final"
       viewport={{ once: true }}
-      className="mx-[15%] my-[6rem] flex"
+      className="mx-[5%] my-16 flex lg:mx-[15%] lg:my-24"
     >
-      <aside className="w-[45%] rounded-bl-xl rounded-tl-xl bg-slate-300">
+      <aside className="hidden w-[45%] rounded-l-xl bg-slate-300 lg:block">
         <img
           src="https://i.pinimg.com/736x/0a/6f/0f/0a6f0f60727318bea29f19ce96040b53.jpg"
           alt="banner-img"
           className="w-full rounded-bl-xl rounded-tl-xl object-cover"
         />
       </aside>
-      <aside className="w-[55%] rounded-br-xl rounded-tr-xl bg-slate-900 p-8">
-        <h3 className="mb-2 text-sm font-medium capitalize text-slate-400 ">
+      <aside className="rounded-l-md rounded-r-md bg-slate-900 p-4 lg:w-[55%] lg:rounded-l-none lg:rounded-r-xl lg:p-8">
+        <h3 className="text-[0.7rem] font-medium capitalize text-slate-400 lg:mb-2 lg:text-xs ">
           LIMITED OFFER
         </h3>
-        <H1 theme="light" className="mb-12">
+        <H1 theme="light" className="lg:mb-12">
           35% off only on this friday and get special gift
         </H1>
         <Button
@@ -50,7 +50,7 @@ export default function AddBanner() {
           type="light"
         >
           <span>Grab it Now</span>
-          <GoArrowRight size={30} />
+          <GoArrowRight className="text-lg lg:text-3xl" />
         </Button>
       </aside>
     </motion.main>
