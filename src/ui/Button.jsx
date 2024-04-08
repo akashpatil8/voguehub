@@ -7,12 +7,13 @@ export default function Button({
   btnType = "button",
   variants,
   custom = null,
+  className = "",
 }) {
   if (type === "secondary")
     return (
       <button
         onClick={onClick}
-        className="rounded-md border-[1.5px] border-slate-100 bg-transparent px-16 py-3 font-medium tracking-wide text-slate-100 duration-300 hover:bg-slate-200 hover:text-slate-800 focus:border-none focus:outline-none focus:ring-2 focus:ring-slate-100"
+        className="rounded-md border-[1.5px] border-slate-100 bg-transparent font-medium tracking-wide text-slate-100 duration-300 hover:bg-slate-200 hover:text-slate-800 focus:border-none focus:outline-none focus:ring-2 focus:ring-slate-100 lg:px-16 lg:py-3"
       >
         {children}
       </button>
@@ -34,7 +35,10 @@ export default function Button({
 
   if (type === "simple")
     return (
-      <button className="mb-4 mt-2 cursor-pointer text-sm text-slate-400 underline underline-offset-4 ring-offset-slate-100 focus:rounded-[1px] focus:outline-none focus:ring-[1px] focus:ring-slate-400 focus:ring-offset-2">
+      <button
+        onClick={onClick}
+        className={`mb-2 mt-1 cursor-pointer text-xs text-slate-400 underline underline-offset-4 ring-offset-slate-100 focus:rounded-[1px] focus:outline-none focus:ring-[1px] focus:ring-slate-400 focus:ring-offset-2 lg:mb-4 lg:mt-2 lg:text-sm ${className}`}
+      >
         {children}
       </button>
     );
@@ -55,7 +59,7 @@ export default function Button({
 
   if (type === "round")
     return (
-      <button className="grid h-12 w-12 place-content-center rounded-full border-[1px] border-slate-700 text-slate-700 duration-300 hover:bg-slate-700 hover:text-slate-100  focus:outline-none focus:ring-[1px] focus:ring-slate-800">
+      <button className="grid h-8 w-8 place-content-center rounded-full border-[1px] border-slate-700 text-slate-700 duration-300 hover:bg-slate-700 hover:text-slate-100 focus:outline-none focus:ring-[1px] focus:ring-slate-800 lg:h-12 lg:w-12">
         {children}
       </button>
     );
@@ -70,11 +74,12 @@ export default function Button({
         {children}
       </button>
     );
+
   return (
     <button
       type={btnType}
       onClick={onClick}
-      className="cursor-pointer rounded-md bg-slate-800 px-16 py-3 font-medium tracking-wide text-slate-100 duration-300 hover:bg-slate-700 hover:text-slate-100 focus:border-none focus:outline-none focus:ring-[1px] focus:ring-slate-800 "
+      className="cursor-pointer rounded-md bg-slate-800 px-8 py-2 text-xs font-medium tracking-wide text-slate-100 duration-300 hover:bg-slate-700 hover:text-slate-100 focus:border-none focus:outline-none focus:ring-[1px] focus:ring-slate-800 lg:px-16 lg:py-3"
     >
       {children}
     </button>

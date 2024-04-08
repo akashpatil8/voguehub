@@ -38,7 +38,7 @@ export default function Header() {
   const { mutate: logout } = useLogout();
 
   return (
-    <header className="grid h-16 bg-white px-[8%] shadow-[1px_1px_10px_0_rgba(0,0,0,0.3)]">
+    <header className="grid h-16 bg-white shadow-[1px_1px_10px_0_rgba(0,0,0,0.3)] lg:px-[8%]">
       <nav className="flex items-center justify-between">
         <motion.button
           variants={varients}

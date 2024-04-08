@@ -11,9 +11,9 @@ export default function Login() {
   const [showLogin, setShowLogin] = useState(true);
 
   return (
-    <main className="grid h-screen place-items-center">
-      <div className="mx-auto flex h-[30rem] w-[80%] px-20">
-        <aside className="relative h-full w-[40%]">
+    <main className="mt-10 grid h-screen place-items-center">
+      <div className="mx-auto flex h-[30rem] w-[80%] lg:px-20">
+        <aside className="relative hidden h-full lg:block lg:w-[40%]">
           <img
             src="https://img.freepik.com/free-photo/outdoor-hight-fashion-portrait-stylish-casual-woman-black-hat-pink-suit-white-blouse-posing-old-street_273443-1186.jpg?w=1380&t=st=1711475738~exp=1711476338~hmac=ca91cea97e0a9fe4a33ae4a14af4dbb2223d88204b352760adbde65121b9654d"
             alt="login-img"
@@ -41,21 +41,38 @@ export default function Login() {
             )}
           </div>
         </aside>
-        <aside className=" flex h-full w-[60%] flex-col items-center justify-center rounded-r-xl bg-slate-100">
+        <aside className="rounded-lgbg-slate-100 flex h-full w-full flex-col items-center justify-center p-4 lg:w-[60%] lg:rounded-r-xl">
           <H1>{showLogin ? "Login to VogueHub" : "Sign in to VogueHub"}</H1>
-          <div className="my-6 flex gap-4">
+          <div className="my-3 flex gap-4 text-xs lg:my-6">
             <Button type="round">
-              <GrGooglePlus size={22} />
+              <GrGooglePlus className="text-xs lg:text-xl" />
             </Button>
             <Button type="round">
-              <GrFacebookOption size={22} />
+              <GrFacebookOption className="text-xs lg:text-xl" />
             </Button>
             <Button type="round">
-              <GrTwitter size={22} />
+              <GrTwitter className="text-xs lg:text-xl" />
             </Button>
           </div>
           <P size="sm">or use your email account</P>
           {showLogin ? <LoginForm /> : <SignUpForm />}
+          {showLogin ? (
+            <Button
+              onClick={() => setShowLogin(false)}
+              type="simple"
+              className="lg:hidden"
+            >
+              Sign Up
+            </Button>
+          ) : (
+            <Button
+              onClick={() => setShowLogin(true)}
+              type="simple"
+              className="lg:hidden"
+            >
+              Log in
+            </Button>
+          )}
         </aside>
       </div>
     </main>

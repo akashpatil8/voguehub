@@ -26,67 +26,65 @@ export default function SignUpForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="mt-2 flex w-[60%] flex-col items-center"
+      className="mt-2 flex flex-col items-center lg:w-[60%]"
     >
-      <div className="my-2 flex w-full items-center gap-2 rounded-md bg-white px-4 py-2 ">
-        <LuUser2 size={20} className="text-slate-500" />
+      <div className="my-2 flex w-full items-center gap-2 rounded-md bg-white px-2 py-2 lg:px-4">
+        <LuUser2 className="text-slate-500 lg:text-xl" />
         <input
           id="name"
           type="text"
           placeholder="Name"
           disabled={isPending}
           {...register("name", { required: "This field is required" })}
-          className="h-8 text-slate-600 placeholder:text-base placeholder:text-slate-400 focus:outline-none"
+          className="h-6 text-sm text-slate-600 placeholder:text-slate-400 focus:outline-none lg:h-8 lg:text-base lg:placeholder:text-base"
         />
         {errors?.name?.message && (
-          <p className=" ml-auto text-xs text-red-400">
+          <p className="ml-auto text-[0.6rem] text-red-400 lg:text-xs">
             {errors?.email?.message}
           </p>
         )}
       </div>
-      <div className="my-2 flex w-full items-center gap-2 rounded-md bg-white px-4 py-2 ">
-        <LuMail size={20} className="text-slate-500" />
+      <div className="my-2 flex w-full items-center gap-2 rounded-md bg-white px-2 py-2 lg:px-4">
+        <LuMail className="text-slate-500 lg:text-xl" />
         <input
           id="email"
           type="text"
           placeholder="Email"
           disabled={isPending}
           {...register("email", { required: "This field is required" })}
-          className="h-8 text-slate-600 placeholder:text-base placeholder:text-slate-400 focus:outline-none"
+          className="h-6 text-sm text-slate-600 placeholder:text-slate-400 focus:outline-none lg:h-8 lg:text-base lg:placeholder:text-base"
         />
         {errors?.email?.message && (
-          <p className=" ml-auto text-xs text-red-400">
+          <p className="ml-auto text-[0.6rem] text-red-400 lg:text-xs">
             {errors?.email?.message}
           </p>
         )}
       </div>
 
-      <div className="my-2 flex w-full items-center gap-2 rounded-md bg-white px-4 py-2 ">
-        <LuLock size={20} className="text-slate-500" />
+      <div className="my-2 flex w-full items-center gap-2 rounded-md bg-white px-2 py-2 lg:px-4">
+        <LuLock className="text-slate-500 lg:text-xl" />
         <input
           id="password"
           type={showPassword ? "text" : "password"}
           placeholder="Password"
           disabled={isPending}
           {...register("password", { required: "This field is required" })}
-          className="h-8 text-slate-600 placeholder:text-base placeholder:text-slate-400 focus:outline-none"
+          className="h-6 text-sm text-slate-600 placeholder:text-slate-400 focus:outline-none lg:h-8 lg:text-base lg:placeholder:text-base"
         />
-        <div className="ml-auto">
+        <div className="ml-auto cursor-pointer duration-300 hover:scale-110">
           {errors?.password?.message ? (
-            <p className="ml-auto text-xs text-red-400">
+            <p className="ml-auto text-[0.6rem] text-red-400 lg:text-xs">
               {errors?.password?.message}
             </p>
           ) : showPassword ? (
             <FaRegEyeSlash
               onClick={() => setShowPassword(false)}
-              size={20}
-              className="text-slate-500"
+              className="text-sm text-slate-500 lg:text-xl"
             />
           ) : (
             <FaRegEye
               onClick={() => setShowPassword(true)}
-              size={20}
-              className="text-slate-500"
+              className="text-sm text-slate-500 lg:text-xl"
             />
           )}
         </div>
