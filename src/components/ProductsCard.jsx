@@ -48,12 +48,12 @@ export default function ProductCard({ item, varients, i }) {
       initial="initial"
       animate="final"
       custom={0.2 * i}
-      className="relative w-[14rem]"
+      className="relative lg:w-56"
     >
       <img
         src={imageUrl}
         alt=""
-        className="mb-2 h-[20rem] w-full rounded-md bg-stone-400 object-cover"
+        className="mb-2 h-80 w-full rounded-md bg-stone-400 object-cover"
       />
       <div className="absolute bottom-36 left-3 h-6 w-12 rounded-sm bg-slate-800 opacity-60"></div>
       <div className="absolute bottom-36 left-3 flex h-6 w-12 items-center justify-center gap-1 rounded-sm text-xs  font-bold text-slate-100">

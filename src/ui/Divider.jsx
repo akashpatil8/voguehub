@@ -1,5 +1,7 @@
 import React from "react";
 
 export default function Divider() {
-  return <div className="my-12 h-[1px] w-full bg-slate-300"></div>;
+  return (
+    <div className="h-[0.5px] w-full rounded-full bg-slate-300 lg:h-[1px]"></div>
+  );
 }

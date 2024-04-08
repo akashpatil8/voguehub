@@ -34,14 +34,14 @@ export default function Products() {
     useGetItems("trending");
 
   return (
-    <main className="relative mt-[6rem] px-[12%]">
+    <main className="relative mt-12 lg:mt-24 lg:px-[12%]">
       <H1 varients={varients} className="mb-1 text-center">
         Discover our favourites
       </H1>
       <P
         varients={varients}
         custom={0.3}
-        className="mx-auto w-[50%] text-center"
+        className="mx-auto w-[70%] text-center lg:w-[50%]"
       >
         Delve into our curated selection and uncover the styles we love most,
         handpicked just for you
@@ -51,7 +51,7 @@ export default function Products() {
         initial="initial"
         whileInView="final"
         viewport={{ once: true }}
-        className="mx-auto my-8 flex w-[70%] justify-center rounded-md bg-slate-200"
+        className="mx-auto my-4 flex w-[70%] justify-center rounded-md bg-slate-200 lg:my-8"
       >
         <TabButton
           onClick={() => setSelected("new")}

@@ -18,12 +18,12 @@ const varients = {
 
 export default function Services() {
   return (
-    <main className="mt-8 px-[5%] text-center lg:mt-24 lg:px-[8%] lg:text-left">
+    <main className="mt-12 px-[5%] text-center lg:mt-24 lg:px-[8%] lg:text-left">
       <div className="items-center justify-between lg:mb-20 lg:flex">
-        <div className=" lg:w-[35%]">
+        <div className="lg:w-[35%]">
           <H1 varients={varients}>We provide best customer experience.</H1>
         </div>
-        <div className="mb-5 items-center gap-10 lg:flex">
+        <div className="mb-10 items-center gap-10 lg:mb-0 lg:flex">
           <motion.div
             variants={varients}
             initial="initial"
@@ -37,12 +37,14 @@ export default function Services() {
           </P>
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-4  lg:flex lg:justify-between">
+      <div className="grid grid-cols-2 gap-4 lg:flex lg:justify-between">
         {data.map((item, i) => (
           <ServiceCard key={item.title} item={item} varients={varients} i={i} />
         ))}
       </div>
-      <Divider />
+      <div className="mt-8">
+        <Divider />
+      </div>
     </main>
   );
 }

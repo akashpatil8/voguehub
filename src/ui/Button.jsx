@@ -27,7 +27,7 @@ export default function Button({
         whileInView="final"
         custom={custom}
         onClick={onClick}
-        className="mt-4 flex items-center justify-center gap-1 rounded-md bg-slate-100 px-4 py-2 text-xs font-medium duration-300 hover:bg-slate-300 focus:outline-none focus:ring-[1px] focus:ring-slate-400 sm:text-sm md:py-3 md:text-lg lg:gap-3 lg:px-6  lg:text-lg"
+        className="mt-4 flex items-center justify-center gap-1 rounded-md bg-slate-100 px-4 py-2 text-xs font-medium duration-300 hover:bg-slate-300 focus:outline-none focus:ring-[1px] focus:ring-slate-400 sm:text-sm md:py-3 md:text-lg lg:gap-3 lg:px-6 lg:text-lg"
       >
         {children}
       </motion.button>

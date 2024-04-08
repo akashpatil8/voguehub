@@ -15,7 +15,7 @@ export default function P({
       whileInView="final"
       viewport={{ once: true }}
       custom={custom}
-      className={`font-light ${size === "sm" ? "text-sm font-normal" : ""} text-xs tracking-wide lg:text-base ${fontColor === "light" ? "text-slate-200" : "text-stone-400"} ${className}`}
+      className={`font-light ${size === "sm" ? "lg:text-sm lg:font-normal" : "lg:text-base"} text-xs tracking-wide  ${fontColor === "light" ? "text-slate-200" : "text-stone-400"} ${className}`}
     >
       {children}
     </motion.p>

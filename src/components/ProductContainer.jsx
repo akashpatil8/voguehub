@@ -15,7 +15,7 @@ export default function ProductsContainer({ items }) {
   return (
     <motion.div
       variants={varients}
-      className="grid grid-cols-4 flex-wrap place-items-center gap-y-16 "
+      className="grid grid-cols-2 flex-wrap place-items-center gap-4 p-4 lg:grid-cols-4 lg:gap-y-16 "
     >
       {items?.map((item, i) => (
         <ProductCard varients={varients} key={item.id} item={item} i={i} />
