@@ -16,9 +16,9 @@ export default function Footer() {
       initial="initial"
       whileInView="final"
       viewport={{ once: true }}
-      className="flex h-16 items-center justify-between bg-slate-200 px-[8%] text-slate-800"
+      className="flex h-10 items-center bg-slate-200 text-slate-800 lg:h-16"
     >
-      <p className="mx-auto text-sm tracking-wide text-stone-500">
+      <p className="mx-auto text-[0.6rem] tracking-wide text-stone-500 lg:text-sm">
         Copyright©2024 VogueHub. All rights reserved.
       </p>
     </motion.footer>
