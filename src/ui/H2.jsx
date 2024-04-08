@@ -12,7 +12,7 @@ export default function H2({
       initial="initial"
       whileInView="final"
       custom={custom}
-      className={`text-xl font-semibold tracking-wider text-slate-700 ${className}`}
+      className={`text-sm font-semibold tracking-wider text-slate-700 lg:text-xl ${className}`}
     >
       {children}
     </motion.h4>

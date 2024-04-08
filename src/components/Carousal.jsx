@@ -8,7 +8,7 @@ import { carousalData as data } from "../../public/data/carousalData";
 
 export default function Carousal() {
   const variants = {
-    initial: { translateY: 50, opacity: 0 },
+    initial: { translateY: 30, opacity: 0 },
     final: {
       translateY: 0,
       opacity: 1,
@@ -29,8 +29,8 @@ export default function Carousal() {
   }
 
   return (
-    <main>
-      <div className="h-[calc(100vh-5rem)] overflow-hidden ">
+    <main className="relative">
+      <div className=" h-60 overflow-hidden lg:h-[calc(100vh-5rem)] ">
         {data.map((item) => (
           <CarousalCard
             key={item.id}
@@ -40,14 +40,14 @@ export default function Carousal() {
           />
         ))}
       </div>
-      <div className="absolute bottom-5 left-0 right-0 flex items-center justify-center gap-1 sm:bottom-6 sm:gap-2 md:bottom-8 md:gap-4 lg:bottom-10">
+      <div className="absolute bottom-2 left-0 right-0 flex items-center justify-center gap-1 sm:bottom-6 sm:gap-2 md:bottom-8 md:gap-4 lg:bottom-10">
         {data.map((_, i) => (
           <motion.div
             variants={variants}
             initial="initial"
             whileInView="final"
             key={i}
-            className={`rounded-full ${currentIndex === i ? "h-3 w-3 bg-slate-200" : "h-2.5 w-2.5 bg-slate-400"}`}
+            className={`rounded-full ${currentIndex === i ? "h-1.5 w-1.5 bg-slate-200 lg:h-3 lg:w-3" : "h-1 w-1 bg-slate-400 lg:h-2.5 lg:w-2.5"}`}
           ></motion.div>
         ))}
       </div>
@@ -57,19 +57,18 @@ export default function Carousal() {
         initial="initial"
         whileInView="final"
         onClick={prevSlide}
-        className="absolute bottom-0 top-0 my-auto ml-8 grid h-[4.5rem] w-[4.5rem]
-           place-items-center rounded-full bg-slate-300 opacity-70 duration-300 hover:bg-slate-50"
+        className="absolute bottom-0 top-0 my-auto ml-4 grid h-8 w-8 place-items-center rounded-full bg-slate-300 opacity-70 duration-300 hover:bg-slate-50 lg:ml-8 lg:h-16 lg:w-16"
       >
-        <GrPrevious size={34} />
+        <GrPrevious className="lg:text-4xl" />
       </motion.button>
       <motion.button
         variants={variants}
         initial="initial"
         whileInView="final"
         onClick={nextSlide}
-        className="absolute bottom-0 right-0 top-0 my-auto mr-8 grid h-[4.5rem] w-[4.5rem] place-items-center rounded-full bg-slate-300 opacity-70 hover:bg-slate-50"
+        className="absolute bottom-0 right-0 top-0 my-auto mr-4 grid h-8 w-8 place-items-center rounded-full bg-slate-300 opacity-70 hover:bg-slate-50 lg:mr-8 lg:h-16 lg:w-16"
       >
-        <GrNext size={34} />
+        <GrNext className="lg:text-4xl" />
       </motion.button>
     </main>
   );

@@ -12,7 +12,7 @@ export default function CarousalCard({ item, currentIndex, variants }) {
   const { isAuthenticated, popup } = useGetUser();
 
   const { url, title } = item;
-  
+
   return (
     <div
       className="h-full transition-opacity duration-300"
@@ -26,25 +26,27 @@ export default function CarousalCard({ item, currentIndex, variants }) {
         className=" absolute h-full w-full object-cover"
       />
       <div className="absolute h-full w-full bg-stone-800 opacity-60"></div>
-      <div className="absolute flex h-full flex-col items-center justify-center gap-4 align-middle opacity-100 lg:gap-14">
+      <div className="absolute flex h-full flex-col items-center justify-center gap-2 align-middle opacity-100 lg:gap-14">
         <motion.span
           variants={variants}
           initial="initial"
           whileInView="final"
-          className="mx-auto w-[80%] text-center text-2xl font-semibold tracking-wider text-white sm:text-4xl md:text-6xl lg:text-7xl"
+          className="mx-auto w-[70%] text-center text-xl font-semibold tracking-wide text-white sm:text-4xl md:text-6xl lg:w-[80%] lg:text-7xl lg:tracking-wider"
         >
           {title}
         </motion.span>
         <div>
           <Button
             variants={variants}
+            initial="initial"
+            whileInView="final"
             onClick={() => {
               isAuthenticated ? navigate("/shop") : popup(<LuUser2 />);
             }}
             type="light"
           >
             Explore Now
-            <GoArrowRight size={26} />
+            <GoArrowRight className="text-lg lg:text-2xl" />
           </Button>
         </div>
       </div>

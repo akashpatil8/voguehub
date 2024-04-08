@@ -27,7 +27,7 @@ export default function Button({
         whileInView="final"
         custom={custom}
         onClick={onClick}
-        className="mt-4 flex items-center justify-center gap-3 rounded-md bg-slate-100 px-6 py-2 text-xs font-medium duration-300 hover:bg-slate-300 focus:outline-none focus:ring-[1px] focus:ring-slate-400 sm:text-sm md:py-3 md:text-lg lg:text-lg"
+        className="mt-4 flex items-center justify-center gap-1 rounded-md bg-slate-100 px-4 py-2 text-xs font-medium duration-300 hover:bg-slate-300 focus:outline-none focus:ring-[1px] focus:ring-slate-400 sm:text-sm md:py-3 md:text-lg lg:gap-3 lg:px-6  lg:text-lg"
       >
         {children}
       </motion.button>
@@ -69,7 +69,7 @@ export default function Button({
       <button
         type={btnType}
         onClick={onClick}
-        className="flex w-[7.5rem] cursor-pointer items-center justify-center gap-2 rounded-md bg-slate-800 py-3 text-sm tracking-wide text-slate-100 duration-300 hover:bg-slate-700 hover:text-slate-100 focus:border-none focus:outline-none focus:ring-[1px] focus:ring-slate-800"
+        className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-slate-800 py-2 text-xs tracking-wide text-slate-100 duration-300 hover:bg-slate-700 hover:text-slate-100 focus:border-none focus:outline-none focus:ring-[1px] focus:ring-slate-800 lg:w-[7.5rem] lg:py-3 lg:text-sm"
       >
         {children}
       </button>
