@@ -43,7 +43,7 @@ export default function TopRatedProducts() {
         initial="initial"
         whileInView="final"
         transition={{ staggerChildren: 0.3 }}
-        className="my-8 grid grid-cols-2 content-center justify-center gap-4 lg:my-12 lg:grid-cols-3 lg:gap-12"
+        className="my-8 grid grid-cols-2 justify-center gap-4 lg:my-12 lg:grid-cols-3 lg:gap-12"
       >
         {topRatedItems?.map((item) => (
           <ProductCard varients={productVarients} key={item.id} item={item} />

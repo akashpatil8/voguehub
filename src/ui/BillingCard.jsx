@@ -17,7 +17,7 @@ const varients = {
 
 export default function BillingCard({ shipping, tax, subtotal, total }) {
   return (
-    <aside className="w-[35%] p-4">
+    <aside className="p-4 lg:w-[35%]">
       <H2 varients={varients} custom={0.2}>
         Cart Total
       </H2>
@@ -26,7 +26,7 @@ export default function BillingCard({ shipping, tax, subtotal, total }) {
         initial="initial"
         whileInView="final"
         custom={0.3}
-        className="my-4"
+        className="my-2 lg:my-4"
       />
       <BillingCardListTile
         varients={varients}
@@ -71,7 +71,7 @@ export default function BillingCard({ shipping, tax, subtotal, total }) {
         custom={0.9}
       >
         Proceed to Checkout
-        <GoArrowRight size={28} />
+        <GoArrowRight className="text-xl lg:text-3xl" />
       </Button>
     </aside>
   );

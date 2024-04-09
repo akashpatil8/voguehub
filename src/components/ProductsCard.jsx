@@ -48,7 +48,7 @@ export default function ProductCard({ item, varients, i }) {
       initial="initial"
       animate="final"
       custom={0.2 * i}
-      className="relative w-40 lg:w-56"
+      className="relative w-40 text-left lg:w-56"
     >
       <img
         src={imageUrl}

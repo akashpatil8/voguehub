@@ -14,24 +14,27 @@ export default function BillingCardListTile({
         initial="initial"
         whileInView="final"
         custom={custom}
-        className=" mb-8 mt-6 flex justify-between"
+        className="mb-4 mt-3 flex justify-between lg:mb-8 lg:mt-6"
       >
-        <h4 className="text-lg font-semibold capitalize text-slate-800">
+        <h4 className="font-semibold capitalize text-slate-800 lg:text-lg">
           {title}
         </h4>
-        <h4 className="text-xl font-bold">${value}</h4>
+        <h4 className="font-bold lg:text-xl">${value}</h4>
       </motion.div>
     );
+
   return (
     <motion.div
       variants={varients}
       initial="initial"
       whileInView="final"
       custom={custom}
-      className="mb-4 flex justify-between"
+      className="mb-3 flex justify-between lg:mb-4"
     >
-      <h4 className="text-sm font-light capitalize text-slate-500">{title}</h4>
-      <h4 className="font-semibold">${value}</h4>
+      <h4 className="text-xs font-light capitalize text-slate-500 lg:text-sm">
+        {title}
+      </h4>
+      <h4 className="text-xs font-semibold lg:text-base">${value}</h4>
     </motion.div>
   );
 }

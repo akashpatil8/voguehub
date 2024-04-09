@@ -13,7 +13,7 @@ export default function Button({
     return (
       <button
         onClick={onClick}
-        className="rounded-md border-[1.5px] border-slate-100 bg-transparent font-medium tracking-wide text-slate-100 duration-300 hover:bg-slate-200 hover:text-slate-800 focus:border-none focus:outline-none focus:ring-2 focus:ring-slate-100 lg:px-16 lg:py-3"
+        className=" rounded-md border-[1.5px] border-slate-100 bg-transparent font-medium tracking-wide text-slate-100 duration-300 hover:bg-slate-200 hover:text-slate-800 focus:border-none focus:outline-none focus:ring-2 focus:ring-slate-100 lg:px-16 lg:py-3"
       >
         {children}
       </button>
@@ -51,7 +51,7 @@ export default function Button({
         whileInView="final"
         custom={custom}
         onClick={onClick}
-        className="flex w-full cursor-pointer items-center justify-center gap-4 rounded-md bg-slate-800 px-16 py-4 font-medium tracking-wide text-slate-100 duration-300 hover:bg-slate-700 hover:text-slate-100 focus:border-none focus:outline-none focus:ring-[1px] focus:ring-slate-800 "
+        className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-sm bg-slate-800 py-2 font-medium tracking-wide text-slate-100 duration-300 hover:bg-slate-700 hover:text-slate-100 focus:border-none focus:outline-none focus:ring-[1px] focus:ring-slate-800 lg:gap-4 lg:rounded-md lg:py-4"
       >
         {children}
       </motion.button>

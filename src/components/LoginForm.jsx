@@ -25,7 +25,7 @@ export default function LoginForm() {
       onSubmit={handleSubmit(onSubmit)}
       className="mt-2 flex flex-col items-center lg:w-[65%]"
     >
-      <div className="my-2 flex w-full items-center gap-2 rounded-md  bg-white px-2 py-2 lg:px-4">
+      <div className="my-2 flex w-full items-center gap-2 rounded-sm bg-white px-2 py-2 lg:rounded-md lg:px-4">
         <LuMail className="text-slate-500 lg:text-xl" />
         <input
           id="email"
@@ -42,7 +42,7 @@ export default function LoginForm() {
         )}
       </div>
 
-      <div className="my-2 flex w-full items-center gap-2 rounded-md  bg-white px-2 py-2 lg:px-4">
+      <div className="my-2 flex w-full items-center gap-2 rounded-sm bg-white  px-2 py-2 lg:rounded-md lg:px-4">
         <LuLock className="text-slate-500 lg:text-xl" />
         <input
           id="password"

@@ -11,7 +11,7 @@ export default function Login() {
   const [showLogin, setShowLogin] = useState(true);
 
   return (
-    <main className="mt-10 grid h-screen place-items-center">
+    <main className="mt-10 grid place-items-center lg:h-screen">
       <div className="mx-auto flex h-[30rem] w-[80%] lg:px-20">
         <aside className="relative hidden h-full lg:block lg:w-[40%]">
           <img
@@ -41,7 +41,7 @@ export default function Login() {
             )}
           </div>
         </aside>
-        <aside className="rounded-lgbg-slate-100 flex h-full w-full flex-col items-center justify-center p-4 lg:w-[60%] lg:rounded-r-xl">
+        <aside className="flex h-full w-full flex-col items-center justify-center rounded-lg bg-slate-100 p-4 lg:w-[60%] lg:rounded-r-xl">
           <H1>{showLogin ? "Login to VogueHub" : "Sign in to VogueHub"}</H1>
           <div className="my-3 flex gap-4 text-xs lg:my-6">
             <Button type="round">

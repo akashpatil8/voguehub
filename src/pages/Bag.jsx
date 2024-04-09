@@ -29,7 +29,7 @@ export default function Bag() {
     usePriceCalculation(bagItems);
 
   return (
-    <main className="flex flex-col justify-center px-[5%] lg:min-h-[calc(100vh-8rem)] lg:px-[8%]">
+    <main className="flex min-h-[calc(100vh-5rem)] flex-col px-[5%] pt-4 lg:min-h-[calc(100vh-8rem)] lg:justify-center lg:px-[8%]">
       {isBagLoading ? (
         <Loader />
       ) : (
@@ -46,7 +46,7 @@ export default function Bag() {
                 initial="initial"
                 animate="final"
                 custom={0.4}
-                className="my-4 max-h-[280px] overflow-y-auto lg:h-[280px] lg:pr-4"
+                className="my-4 h-[280px] overflow-y-auto lg:my-0 lg:pr-4"
               >
                 {bagItems.length === 0 ? (
                   <P>No items in your bag</P>
@@ -61,7 +61,7 @@ export default function Bag() {
                 )}
               </motion.ul>
               <div className="lg:mt-12">
-                <P varients={varients} custom={0.6} className="mb-2 lg:mb-4">
+                <P varients={varients} custom={0.6} className="mb-2">
                   Have a coupon? Enter your code here,
                 </P>
 
@@ -70,15 +70,15 @@ export default function Bag() {
                   initial="initial"
                   animate="final"
                   custom={0.8}
-                  className="flex gap-2"
+                  className="mb-8 flex gap-1 lg:mb-0 lg:gap-2"
                 >
-                  <div className="flex items-center gap-2 rounded-md border-[1px] bg-white lg:w-80 lg:px-4 lg:py-2 ">
-                    <RiCoupon3Line className="text-slate-400 lg:text-xl" />
+                  <div className="flex items-center gap-2 rounded-sm border-[1px] bg-white px-2 lg:w-80 lg:rounded-md lg:px-4 lg:py-2 ">
+                    <RiCoupon3Line className="text-sm text-slate-400 lg:text-xl" />
                     <input
                       id="coupon"
                       type="text"
                       placeholder="Enter coupon code"
-                      className="h-8 text-sm text-slate-600 placeholder:text-sm placeholder:text-slate-400 focus:outline-none lg:text-base lg:placeholder:text-base"
+                      className="text-sm text-slate-600 placeholder:text-xs placeholder:text-slate-400 focus:outline-none lg:text-base lg:placeholder:text-base"
                     />
                   </div>
                   <Button onClick={() => toast.error("Coupon code invalid")}>
@@ -89,7 +89,7 @@ export default function Bag() {
             </aside>
             {bagItems.length > 0 && (
               <>
-                <div className="mr-8 w-[1px] bg-slate-300"></div>
+                <div className="mr-8 hidden w-[1px] bg-slate-300 lg:block"></div>
 
                 <BillingCard
                   shipping={shipping}
