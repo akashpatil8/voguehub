@@ -75,7 +75,7 @@ export default function Products() {
           Trending Ones
         </TabButton>
       </motion.div>
-      <div className="pb-10">
+      <div className="px-[5%] pb-10 lg:px-0">
         {isNewLoading || isFeaturedLoading || isTrendingLoading ? (
           <Loader />
         ) : (

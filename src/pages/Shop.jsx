@@ -36,7 +36,7 @@ export default function Shop() {
 
   return (
     <main className="flex min-h-[calc(100vh-8rem)]">
-      <aside className="mx-8 my-4 h-[42rem] w-[17%] rounded-lg bg-slate-100 p-8">
+      <aside className="mx-8 my-4 hidden h-[42rem] w-[17%] rounded-lg bg-slate-100 p-8 lg:block">
         <form onChange={(e) => handleChange(e)}>
           <div className="flex flex-col">
             {categoryData?.map((data, i) => (
@@ -50,7 +50,7 @@ export default function Shop() {
           </div>
         </form>
       </aside>
-      <aside className="my-4 mr-8 h-full w-[80%] overflow-y-auto rounded-lg bg-slate-100 p-8">
+      <aside className="mx-auto my-4 h-full overflow-y-auto rounded-lg bg-slate-100 p-4 lg:mr-8 lg:w-[80%] lg:p-8">
         {category === "all" &&
           (isAllLoading ? (
             <Loader />
