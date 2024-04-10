@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { LuLock, LuMail, LuUser2 } from "react-icons/lu";
 import { useForm } from "react-hook-form";
 
@@ -6,7 +7,6 @@ import { useSignUp } from "../hooks/useSignUp";
 import Button from "../ui/Button";
 import Spinner from "../ui/Spinner";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
-import { useState } from "react";
 
 export default function SignUpForm() {
   const [showPassword, setShowPassword] = useState(false);

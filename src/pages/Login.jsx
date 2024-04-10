@@ -42,7 +42,7 @@ export default function Login() {
           </div>
         </aside>
         <aside className="flex h-full w-full flex-col items-center justify-center rounded-lg bg-slate-100 p-4 lg:w-[60%] lg:rounded-r-xl">
-          <H1>{showLogin ? "Login to VogueHub" : "Sign in to VogueHub"}</H1>
+          <H1>{showLogin ? "Login to VogueHub" : "Signup to VogueHub"}</H1>
           <div className="my-3 flex gap-4 text-xs lg:my-6">
             <Button type="round">
               <GrGooglePlus className="text-xs lg:text-xl" />
