@@ -61,7 +61,7 @@ export default function Bag() {
                 initial="initial"
                 animate="final"
                 custom={0.4}
-                className="scrollbar my-4 h-[280px] overflow-y-auto lg:my-0 lg:pr-4"
+                className=" my-4 h-[280px] overflow-y-auto lg:my-0 lg:pr-4"
               >
                 {bagItems.map((item) => (
                   <BagItemListTile

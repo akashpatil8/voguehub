@@ -25,12 +25,13 @@ export default function LoginForm() {
       onSubmit={handleSubmit(onSubmit)}
       className="mt-2 flex flex-col items-center lg:w-[65%]"
     >
-      <div className="my-2 flex w-full items-center gap-2 rounded-sm bg-white px-2 py-2 lg:rounded-md lg:px-4">
+      <div className="my-2 flex w-full items-center gap-2 rounded-sm bg-white px-2 py-2 lg:gap-4 lg:rounded-md lg:px-4">
         <LuMail className="text-slate-500 lg:text-xl" />
         <input
           id="email"
           type="text"
           placeholder="Email"
+          value="test@test.com"
           disabled={isPending}
           {...register("email", { required: "This field is required" })}
           className="h-6 text-sm text-slate-600 placeholder:text-slate-400 focus:outline-none lg:h-8 lg:text-base lg:placeholder:text-base"
@@ -42,12 +43,13 @@ export default function LoginForm() {
         )}
       </div>
 
-      <div className="my-2 flex w-full items-center gap-2 rounded-sm bg-white  px-2 py-2 lg:rounded-md lg:px-4">
+      <div className="my-2 flex w-full items-center gap-2 rounded-sm bg-white px-2 py-2 lg:gap-4 lg:rounded-md lg:px-4">
         <LuLock className="text-slate-500 lg:text-xl" />
         <input
           id="password"
           type={showPassword ? "text" : "password"}
           placeholder="Password"
+          value="test1234"
           disabled={isPending}
           {...register("password", { required: "This field is required" })}
           className="h-6 text-sm text-slate-600 placeholder:text-slate-400 focus:outline-none lg:h-8 lg:text-base lg:placeholder:text-base"

@@ -10,16 +10,16 @@
   box-sizing: border-box;
 }
 
-.scrollbar::-webkit-scrollbar {
+html::-webkit-scrollbar {
   width: 10px;
 }
 
-.scrollbar::-webkit-scrollbar-track {
+html::-webkit-scrollbar-track {
   border-radius: 8px;
   background-color: #e7e7e7;
 }
 
-.scrollbar::-webkit-scrollbar-thumb {
+html::-webkit-scrollbar-thumb {
   border-radius: 8px;
   background-color: #b3b3b3;
 }
