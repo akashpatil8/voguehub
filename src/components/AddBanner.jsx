@@ -8,7 +8,7 @@ import Button from "../ui/Button";
 
 import { useGetUser } from "../hooks/useGetUser";
 
-const varients = {
+const variants = {
   initial: { translateY: 80, opacity: 0 },
   final: (time) => ({
     translateY: 0,
@@ -23,7 +23,7 @@ export default function AddBanner() {
 
   return (
     <motion.main
-      variants={varients}
+      variants={variants}
       initial="initial"
       whileInView="final"
       viewport={{ once: true }}

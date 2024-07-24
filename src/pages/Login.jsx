@@ -4,6 +4,7 @@ import { GrFacebookOption, GrGooglePlus, GrTwitter } from "react-icons/gr";
 import Button from "../ui/Button";
 import LoginForm from "../components/LoginForm";
 import SignUpForm from "../components/SignUpForm";
+import loginBackgroundImg from "../../public/assets/login-background-img.webp";
 import H1 from "../ui/H1";
 import P from "../ui/P";
 
@@ -15,7 +16,7 @@ export default function Login() {
       <div className="mx-auto flex h-[30rem] w-[80%] lg:px-20">
         <aside className="relative hidden h-full lg:block lg:w-[40%]">
           <img
-            src="https://img.freepik.com/free-photo/outdoor-hight-fashion-portrait-stylish-casual-woman-black-hat-pink-suit-white-blouse-posing-old-street_273443-1186.jpg?w=1380&t=st=1711475738~exp=1711476338~hmac=ca91cea97e0a9fe4a33ae4a14af4dbb2223d88204b352760adbde65121b9654d"
+            src={loginBackgroundImg}
             alt="login-img"
             className="h-full rounded-l-xl object-cover"
           />

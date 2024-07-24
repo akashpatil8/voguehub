@@ -8,7 +8,7 @@ import Button from "../ui/Button";
 
 import { useGetUser } from "../hooks/useGetUser";
 
-const varients = {
+const variants = {
   initial: { translateY: 80, opacity: 0 },
   final: (time) => ({
     translateY: 0,
@@ -25,11 +25,11 @@ export default function CTA() {
   return (
     <main className="mx-[5%] my-12 text-center lg:mx-[8%] lg:my-24">
       <div className="mx-auto w-[80%]">
-        <H1 varients={varients} className="mb-2">
+        <H1 variants={variants} className="mb-2">
           Subscribe to our newsletter to get updates to our latest collections
         </H1>
         <P
-          varients={varients}
+          variants={variants}
           custom={0.2}
           className="mb-4 font-light text-stone-500"
         >
@@ -37,7 +37,7 @@ export default function CTA() {
         </P>
       </div>
       <motion.div
-        variants={varients}
+        variants={variants}
         initial="initial"
         whileInView="final"
         viewport={{ once: true }}
@@ -61,7 +61,7 @@ export default function CTA() {
           Subscribe
         </Button>
       </motion.div>
-      <P varients={varients} custom={0.4} size="sm" className="mt-2 lg:mt-4">
+      <P variants={variants} custom={0.4} size="sm" className="mt-2 lg:mt-4">
         You will be able to unsubscribe at anytime.
         <br />
         Read our privecy policy,

@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import H2 from "./H2";
 import P from "./P";
 
-export default function ServiceCard({ item, varients, i }) {
+export default function ServiceCard({ item, variants, i }) {
   return (
     <motion.div
-      variants={varients}
+      variants={variants}
       initial="initial"
       whileInView="final"
       viewport={{ once: true }}

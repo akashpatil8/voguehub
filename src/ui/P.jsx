@@ -5,12 +5,12 @@ export default function P({
   size = "md",
   className = "",
   fontColor = "dark",
-  varients,
+  variants,
   custom = null,
 }) {
   return (
     <motion.p
-      variants={varients}
+      variants={variants}
       initial="initial"
       whileInView="final"
       viewport={{ once: true }}

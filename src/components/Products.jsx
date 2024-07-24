@@ -13,7 +13,7 @@ import ProductsContainer from "./ProductContainer";
 import { useGetUser } from "../hooks/useGetUser";
 import { useGetItems } from "../hooks/useGetItems";
 
-const varients = {
+const variants = {
   initial: { translateY: 30, opacity: 0 },
   final: (time) => ({
     translateY: 0,
@@ -35,11 +35,11 @@ export default function Products() {
 
   return (
     <main className="relative mt-12 lg:mt-24 lg:px-[12%]">
-      <H1 varients={varients} className="mb-1 text-center">
+      <H1 variants={variants} className="mb-1 text-center">
         Discover our favourites
       </H1>
       <P
-        varients={varients}
+        variants={variants}
         custom={0.3}
         className="mx-auto w-[70%] text-center lg:w-[50%]"
       >
@@ -47,7 +47,7 @@ export default function Products() {
         handpicked just for you
       </P>
       <motion.div
-        variants={varients}
+        variants={variants}
         initial="initial"
         whileInView="final"
         viewport={{ once: true }}
@@ -91,7 +91,7 @@ export default function Products() {
         )}
       </div>
       <motion.div
-        variants={varients}
+        variants={variants}
         initial="initial"
         whileInView="final"
         viewport={{ once: true }}

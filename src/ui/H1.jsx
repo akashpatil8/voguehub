@@ -4,12 +4,12 @@ export default function H1({
   children,
   theme = "dark",
   className = "",
-  varients,
+  variants,
   custom = null,
 }) {
   return (
     <motion.h1
-      variants={varients}
+      variants={variants}
       initial="initial"
       whileInView="final"
       viewport={{ once: true }}

@@ -31,7 +31,7 @@ export default function Header() {
   const { isAuthenticated, popup } = useGetUser();
 
   return (
-    <header className="grid h-10 bg-white px-6 shadow-[1px_1px_10px_0_rgba(0,0,0,0.3)] lg:h-16 lg:px-[8%]">
+    <header className="grid h-10 bg-white px-6  shadow-lg lg:h-16 lg:px-[8%]">
       <nav className="flex items-center justify-between">
         <motion.button
           variants={varients}

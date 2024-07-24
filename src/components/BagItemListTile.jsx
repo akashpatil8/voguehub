@@ -7,7 +7,7 @@ import Spinner from "../ui/Spinner";
 import { useUpdateBagItemQuantity } from "../hooks/useUpdateBagItemQuantity";
 import { useDeleteItems } from "../hooks/useDeleteItems";
 
-export default function BagItemListTile({ item, varients }) {
+export default function BagItemListTile({ item, variants }) {
   const {
     id,
     name,
@@ -24,7 +24,7 @@ export default function BagItemListTile({ item, varients }) {
 
   return (
     <motion.div
-      variants={varients}
+      variants={variants}
       initial="initial"
       whileInView="final"
       custom={0.3}
