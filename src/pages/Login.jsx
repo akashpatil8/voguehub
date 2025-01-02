@@ -1,18 +1,18 @@
 import { useState } from "react";
 import { GrFacebookOption, GrGooglePlus, GrTwitter } from "react-icons/gr";
 
+import P from "../ui/P";
+import H1 from "../ui/H1";
 import Button from "../ui/Button";
 import LoginForm from "../components/LoginForm";
 import SignUpForm from "../components/SignUpForm";
 import loginBackgroundImg from "../../public/assets/login-background-img.webp";
-import H1 from "../ui/H1";
-import P from "../ui/P";
 
 export default function Login() {
   const [showLogin, setShowLogin] = useState(true);
 
   return (
-    <main className="mt-10 grid place-items-center lg:h-screen">
+    <main className=" grid place-items-center lg:h-screen">
       <div className="mx-auto flex h-[30rem] w-[80%] lg:px-20">
         <aside className="relative hidden h-full lg:block lg:w-[40%]">
           <img
